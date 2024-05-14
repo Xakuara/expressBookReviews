@@ -20,7 +20,6 @@ public_users.post("/register", (req,res) => {
   } 
   return res.status(404).json({message: "Unable to register user."});
 
- // return res.status(300).json({message: "Yet to be implemented"});
 });
 
 function getBooksPromise(booksRouter) { 
@@ -28,7 +27,7 @@ function getBooksPromise(booksRouter) {
         if (booksRouter) {
             resolve(booksRouter);
         } else {
-            reject("No books were found, please try again with different parameters.");
+            reject("No books were found, please try again!");
         }
     });
 }
